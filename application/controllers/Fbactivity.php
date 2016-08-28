@@ -31,8 +31,8 @@ class Fbactivity extends CI_Controller {
 				$this->no_login();
 			}
 		} else {
-			$this->load->view('fbactivity/header.php', data);
-			$this->load->view('fbactivity/login.php', data);
+			$this->load->view('fbactivity/header.php', $data);
+			$this->load->view('fbactivity/login.php', $data);
 			$data["rows"] = json_decode($this->list(), true);
 			$this->load->view('fbactivity/list.php', $data);
 			$this->load->view('fbactivity/footer.php');
